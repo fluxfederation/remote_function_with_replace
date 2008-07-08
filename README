@@ -1,0 +1,21 @@
+RemoteFunctionWithReplace
+=========================
+
+This plugin extends remote_function (and so link_to_remote) so that it supports
+:replace (corresponding to Prototype's Element.replace) in addition to the normal
+:update (which corresponds to Prototype's Element.update).
+
+Particularly useful when you use render :collection with a partial that wraps
+each object in the collection in its own DIV/TR/TD/whatever, as you often need to
+replace the contents but would like to be able to reuse that same partial without
+splitting it into wrapper & inner content partials.
+
+
+Example
+=======
+
+<%= link_to_remote 'Refresh row', customer_path(customer), :replace => dom_id(customer) %>
+<%= link_to_remote 'Refresh row', customer_path(customer), :replace => {:success => dom_id(customer), :failure => "errors"} %>
+
+
+Copyright (c) 2008 Will Bryant, released under the MIT license
