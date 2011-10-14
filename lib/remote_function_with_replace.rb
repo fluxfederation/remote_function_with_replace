@@ -1,3 +1,5 @@
+require 'action_view/helpers/prototype_helper'
+
 module ActionView
   module Helpers
     module PrototypeHelper
