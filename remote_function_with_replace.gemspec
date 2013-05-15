@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/powershop/remote_function_with_replace'
   s.summary       = "Extends Rails' remote_function to include a :replace action."
   s.description   = "Extends Rails' remote_function to include a :replace action."
-  s.add_dependency 'actionpack', '~> 3.1.0'
+  s.add_dependency 'actionpack', '>= 3.1.0'
   s.files         = %w(README MIT-LICENSE) + Dir["lib/**/*"]
   s.require_paths = ['lib']
 end
